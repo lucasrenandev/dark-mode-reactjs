@@ -1,0 +1,39 @@
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0b0f50;
+    transition: background 0.5s ease;
+}
+
+section.active {
+    background: #000;
+}
+
+main {
+    width: 200px;
+    height: 90px;
+    border: 3px solid #fff;
+    border-radius: 60px;
+    position: relative;
+    cursor: pointer;
+}
+
+main::before {
+    position: absolute;
+    content: '';
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #fff;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: left 0.5s ease;
+}
+
+main.active::before {
+    left: 109px;
+}
